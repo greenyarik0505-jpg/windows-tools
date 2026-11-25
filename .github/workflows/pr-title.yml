@@ -40,6 +40,9 @@ jobs:
             clipboard
             capture
             island
+            agents
+            input
+            display
             cleaner
             tools
             deps

@@ -14,11 +14,14 @@
 # B - система
 /src/Modules/WindowsTools.Modules.Audio/      @SASCYT9
 /src/Modules/WindowsTools.Modules.Monitor/    @SASCYT9
+/src/Modules/WindowsTools.Modules.Display/    @SASCYT9
+/src/Modules/WindowsTools.Modules.Agents/     @SASCYT9
 
 # C - вікна
 /src/Modules/WindowsTools.Modules.Switcher/   @kirilpuskaruk-svg
 /src/Modules/WindowsTools.Modules.Snap/       @kirilpuskaruk-svg
 /src/Modules/WindowsTools.Modules.Clipboard/  @kirilpuskaruk-svg
+/src/Modules/WindowsTools.Modules.Input/      @kirilpuskaruk-svg
 
 # D - захоплення й обслуговування
 # /src/Modules/WindowsTools.Modules.Capture/    @dev-d

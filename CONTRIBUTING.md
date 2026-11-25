@@ -50,7 +50,7 @@ issue  →  гілка від main  →  коміти  →  PR (draft)  →  CI 
 | `!` після scope або `BREAKING CHANGE:` | зламана сумісність налаштувань/даних | major (до 1.0 — minor) |
 
 Scope: `app` `core` `interop` `audio` `monitor` `switcher` `snap` `clipboard` `capture` `island`
-`cleaner` `tools` `deps` `release` `repo`.
+`agents` `input` `display` `cleaner` `tools` `deps` `release` `repo`.
 
 Приклади:
 

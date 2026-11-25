@@ -9,7 +9,7 @@
                 │ реєструє та вмикає/вимикає
 ┌───────────────▼───────────────┐
 │  Modules.*  (по проєкту кожен) │   Audio · Monitor · Switcher · Snap · Clipboard
-│  не знають один про одного     │   Capture · Island · Cleaner · Tools
+│  не знають один про одного     │   Capture · Island · Agents · Input · Display · Cleaner · Tools
 └───────────────┬───────────────┘
                 │ залежать лише від
 ┌───────────────▼───────────────┐      ┌─────────────────────────────┐
@@ -58,6 +58,9 @@ public interface IModule
 | Clipboard | `AddClipboardFormatListener`, формати text/html/image/files |
 | Capture | `Windows.Graphics.Capture`, Media Foundation для запису, `Windows.Media.Ocr`, Win2D для анотацій |
 | Island | завжди-зверху layered-вікно, `GlobalSystemMediaTransportControlsSessionManager`, `UserNotificationListener` |
+| Agents | журнали сесій CLI-агентів у профілі користувача (також у WSL), named pipe для подій хуків, Credential Manager для токенів |
+| Input | низькорівневі хуки миші й клавіатури, `SendInput`, Raw Input для тачпада |
+| Display | DDC/CI (`SetVCPFeature`), WMI-яскравість, `Windows.Devices.Radios` |
 | Cleaner | Known Folders, реєстр Uninstall, `winget` CLI для оновлень |
 | Tools | `SetThreadExecutionState` (keep-awake), піпетка через `GetPixel`/capture |
 
