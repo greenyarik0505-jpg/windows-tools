@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and test
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Detect solution
+        id: sln
+        shell: pwsh
+        run: |
+          $found = [bool](Get-ChildItem -File -Filter *.sln*)
+          "exists=$($found.ToString().ToLower())" >> $env:GITHUB_OUTPUT
+          if (-not $found) { Write-Host "::notice::No solution yet - build steps skipped (phase 0)." }
+
+      - uses: actions/setup-dotnet@v4
+        if: steps.sln.outputs.exists == 'true'
+        with:
+          global-json-file: global.json
+
+      - name: Restore
+        if: steps.sln.outputs.exists == 'true'
+        run: dotnet restore
+
+      - name: Format check
+        if: steps.sln.outputs.exists == 'true'
+        run: dotnet format --verify-no-changes --no-restore
+
+      - name: Build
+        if: steps.sln.outputs.exists == 'true'
+        run: dotnet build -c Release --no-restore -p:Platform=x64
+
+      - name: Test
+        if: steps.sln.outputs.exists == 'true'
+        run: dotnet test -c Release --no-build -p:Platform=x64 --logger "trx;LogFileName=results.trx"
+
+      - name: Upload test results
+        if: always() && steps.sln.outputs.exists == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: '**/results.trx'
+          if-no-files-found: ignore
