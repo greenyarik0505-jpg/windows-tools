@@ -1,24 +1,24 @@
-# Останнє правило, що збігається, перемагає. Замініть на реальні логіни чотирьох розробників
-# (ролі A-D з docs/ROADMAP.md) і розкоментуйте рядки модулів.
+# Останнє правило, що збігається, перемагає. Ролі A-D - у docs/ROADMAP.md.
+# Роль D ще не призначена: впишіть логін замість @dev-d і розкоментуйте рядки.
 
-*                                @greenyarik0505-jpg @SASCYT9
+*                                @greenyarik0505-jpg
 
 # A - платформа
-# /src/WindowsTools.App/         @dev-a
-# /src/WindowsTools.Core/        @dev-a
-# /src/WindowsTools.Interop/     @dev-a
-# /src/Modules/WindowsTools.Modules.Island/     @dev-a
-# /.github/                      @dev-a
-# /Directory.Build.props         @dev-a
+/src/WindowsTools.App/         @greenyarik0505-jpg
+/src/WindowsTools.Core/        @greenyarik0505-jpg
+/src/WindowsTools.Interop/     @greenyarik0505-jpg
+/src/Modules/WindowsTools.Modules.Island/     @greenyarik0505-jpg
+/.github/                      @greenyarik0505-jpg
+/Directory.Build.props         @greenyarik0505-jpg
 
 # B - система
-# /src/Modules/WindowsTools.Modules.Audio/      @dev-b
-# /src/Modules/WindowsTools.Modules.Monitor/    @dev-b
+/src/Modules/WindowsTools.Modules.Audio/      @SASCYT9
+/src/Modules/WindowsTools.Modules.Monitor/    @SASCYT9
 
 # C - вікна
-# /src/Modules/WindowsTools.Modules.Switcher/   @dev-c
-# /src/Modules/WindowsTools.Modules.Snap/       @dev-c
-# /src/Modules/WindowsTools.Modules.Clipboard/  @dev-c
+/src/Modules/WindowsTools.Modules.Switcher/   @kirilpuskaruk-svg
+/src/Modules/WindowsTools.Modules.Snap/       @kirilpuskaruk-svg
+/src/Modules/WindowsTools.Modules.Clipboard/  @kirilpuskaruk-svg
 
 # D - захоплення й обслуговування
 # /src/Modules/WindowsTools.Modules.Capture/    @dev-d
