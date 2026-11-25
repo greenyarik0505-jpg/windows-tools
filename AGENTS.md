@@ -82,7 +82,7 @@ docs/                      ROADMAP, ARCHITECTURE, adr/
 - Коміти та **заголовок PR** — Conventional Commits: `<type>(<scope>): <summary>`.
   - type: `feat` `fix` `perf` `refactor` `docs` `test` `build` `ci` `chore` `revert`
   - scope: `app` `core` `interop` `audio` `monitor` `switcher` `snap` `clipboard` `capture` `island`
-    `cleaner` `tools` `deps` `release` `repo`
+    `agents` `input` `display` `cleaner` `tools` `deps` `release` `repo`
   - зламана сумісність: `feat(core)!: ...` плюс `BREAKING CHANGE:` у тілі.
 - Мердж — лише squash; заголовок PR стає комітом у `main` і потрапляє в CHANGELOG. Пиши його для користувача.
 - PR маленький (орієнтир до ~400 рядків диффу), одна тема. Великі фічі — кількома PR за feature-прапором.
