@@ -3,6 +3,7 @@
     <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
     <TargetPlatformMinVersion>10.0.22000.0</TargetPlatformMinVersion>
     <Platforms>AnyCPU;x64;ARM64</Platforms>
+    <PlatformTarget Condition="'$(Platform)' == '' OR '$(Platform)' == 'AnyCPU'">x64</PlatformTarget>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using WindowsTools.Core.Logging;
 using WindowsTools.Core.Modules;
 using WindowsTools.Core.Settings;
+using WindowsTools.Core.Tray;
 
 namespace WindowsTools.Core;
 
@@ -45,6 +46,7 @@ public static class ServiceCollectionExtensions
 
         services.TryAddSingleton<ISettingsStore>(sp =>
             new FileSettingsStore(settingsDir, sp.GetRequiredService<ILogger<FileSettingsStore>>()));
+        services.TryAddSingleton<ITrayHost, TrayHost>();
 
         var moduleList = modules.ToList();
         foreach (var module in moduleList)
