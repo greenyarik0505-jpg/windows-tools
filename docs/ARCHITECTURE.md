@@ -20,13 +20,21 @@
 └────────────────────────────────┘
 ```
 
-## Контракт модуля (чернетка, фіналізується у фазі 0)
+## Контракт модуля (заморожено у фазі 0)
 
 ```csharp
+public sealed record ModuleMetadata(
+    string Name,
+    string Description,
+    string? IconGlyph = null,
+    bool IsExperimental = false,
+    bool RequiresAdmin = false,
+    bool EnabledByDefault = false);
+
 public interface IModule
 {
     string Id { get; }                       // "audio", стабільний, використовується в налаштуваннях
-    ModuleMetadata Metadata { get; }         // назва, опис, іконка, IsExperimental, RequiresAdmin
+    ModuleMetadata Metadata { get; }         // назва, опис, іконка, IsExperimental, RequiresAdmin, EnabledByDefault
     void ConfigureServices(IServiceCollection services);
     Task StartAsync(CancellationToken ct);   // ставить хуки, таймери, вікна
     Task StopAsync(CancellationToken ct);    // звільняє ВСЕ; після цього модуль коштує нуль
