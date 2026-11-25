@@ -1,0 +1,51 @@
+name: PR title
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+permissions:
+  pull-requests: read
+
+jobs:
+  title:
+    name: Conventional PR title
+    runs-on: ubuntu-latest
+    # Release PRs are titled by release-please itself.
+    if: ${{ !startsWith(github.head_ref, 'release-please--') }}
+    steps:
+      - uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            feat
+            fix
+            perf
+            refactor
+            docs
+            test
+            build
+            ci
+            chore
+            revert
+          scopes: |
+            app
+            core
+            interop
+            audio
+            monitor
+            switcher
+            snap
+            clipboard
+            capture
+            island
+            cleaner
+            tools
+            deps
+            release
+            repo
+          requireScope: true
+          subjectPattern: ^(?![A-Z]).+[^.]$
+          subjectPatternError: |
+            Subject "{subject}" must start with a lowercase letter and not end with a period.
