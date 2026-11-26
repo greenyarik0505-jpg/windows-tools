@@ -1,0 +1,19 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Folder Name="/src/">
+    <Project Path="src/WindowsTools.App/WindowsTools.App.csproj">
+      <Platform Solution="*|Any CPU" Project="x64" />
+      <Platform Solution="*|ARM64" Project="ARM64" />
+      <Platform Solution="*|x64" Project="x64" />
+    </Project>
+    <Project Path="src/WindowsTools.Core/WindowsTools.Core.csproj" />
+    <Project Path="src/WindowsTools.Interop/WindowsTools.Interop.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/WindowsTools.Core.Tests/WindowsTools.Core.Tests.csproj" />
+  </Folder>
+</Solution>
