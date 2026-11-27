@@ -11,7 +11,7 @@ public sealed class ProcessInteropTests
     /// Ensures the generated Win32 call returns the identifier of this process.
     /// </summary>
     [Fact]
-    public void GetCurrentProcessId_ReturnsCurrentProcessId()
+    public void GetCurrentProcessIdReturnsCurrentProcessId()
     {
         Assert.Equal((uint)Environment.ProcessId, ProcessInterop.GetCurrentProcessId());
     }
