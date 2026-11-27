@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Module_Name" xml:space="preserve">
+    <value>Island</value>
+  </data>
+  <data name="Module_Description" xml:space="preserve">
+    <value>Верхній оверлей-пігулка для активностей модулів та AI-агентів.</value>
+  </data>
+  <data name="Island_IdleTitle" xml:space="preserve">
+    <value>WindowsTools</value>
+  </data>
+  <data name="Island_IdleSubtitle" xml:space="preserve">
+    <value>Немає активних подій</value>
+  </data>
+  <data name="Island_WaitingBadge" xml:space="preserve">
+    <value>Очікує</value>
+  </data>
+  <data name="Island_MoreActivitiesFormat" xml:space="preserve">
+    <value>+{0}</value>
+  </data>
+  <data name="Island_CollapseTooltip" xml:space="preserve">
+    <value>Згорнути</value>
+  </data>
+</root>

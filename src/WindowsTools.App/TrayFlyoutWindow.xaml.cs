@@ -98,7 +98,7 @@ public sealed partial class TrayFlyoutWindow : Window
             presenter.IsAlwaysOnTop = true;
         }
 
-        AppWindow.IsShownInSwitchers = false;
+        OverlayWindowInterop.ConfigureToolWindow(_hwnd);
         AppWindow.Hide();
     }
 

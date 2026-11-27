@@ -25,5 +25,6 @@
   <ItemGroup>
     <ProjectReference Include="..\WindowsTools.Core\WindowsTools.Core.csproj" />
     <ProjectReference Include="..\WindowsTools.Interop\WindowsTools.Interop.csproj" />
+    <ProjectReference Include="..\Modules\WindowsTools.Modules.Island\WindowsTools.Modules.Island.csproj" />
   </ItemGroup>
 </Project>

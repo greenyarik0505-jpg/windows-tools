@@ -48,6 +48,22 @@ public static class OverlayWindowInterop
     }
 
     /// <summary>
+    /// Marks a window handle as a tool window so it stays hidden from the taskbar and Alt+Tab switcher.
+    /// </summary>
+    public static void ConfigureToolWindow(nint hwnd)
+    {
+        if (hwnd == 0)
+        {
+            return;
+        }
+
+        var handle = (HWND)hwnd;
+        var currentStyle = PInvoke.GetWindowLongPtr(handle, WINDOW_LONG_PTR_INDEX.GWL_EXSTYLE);
+        var updatedStyle = currentStyle | (nint)WINDOW_EX_STYLE.WS_EX_TOOLWINDOW;
+        _ = PInvoke.SetWindowLongPtr(handle, WINDOW_LONG_PTR_INDEX.GWL_EXSTYLE, updatedStyle);
+    }
+
+    /// <summary>
     /// Moves and resizes a topmost overlay without activating or focusing it.
     /// </summary>
     public static void SetTopMostBoundsNoActivate(nint hwnd, int x, int y, int width, int height)

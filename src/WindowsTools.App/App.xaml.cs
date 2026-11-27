@@ -1,10 +1,13 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml;
 using WindowsTools.Core;
+using WindowsTools.Core.Activities;
 using WindowsTools.Core.Modules;
 using WindowsTools.Core.Tray;
 using WindowsTools.Interop;
+using WindowsTools.Modules.Island;
 using WinRT.Interop;
 
 namespace WindowsTools.App;
@@ -30,7 +33,11 @@ public partial class App : Application, IDisposable
         InitializeComponent();
 
         var collection = new ServiceCollection();
-        collection.AddWindowsToolsCore(CreateModules());
+        collection.AddWindowsToolsCore([]);
+        collection.AddSingleton<IModule>(sp =>
+            new IslandModule(
+                sp.GetRequiredService<IActivityHub>(),
+                DispatcherQueue.GetForCurrentThread()));
         _services = collection.BuildServiceProvider();
     }
 
@@ -68,8 +75,6 @@ public partial class App : Application, IDisposable
         _trayIconHost.SettingsClicked += OnTraySettingsClicked;
         _trayIconHost.ExitClicked += OnTrayExitClicked;
     }
-
-    private static IReadOnlyList<IModule> CreateModules() => [];
 
     private void OnTrayPrimaryClicked(object? sender, (int X, int Y) anchor)
     {
