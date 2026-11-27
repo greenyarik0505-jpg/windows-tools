@@ -1,28 +1,31 @@
 # Останнє правило, що збігається, перемагає. Ролі A-D - у docs/ROADMAP.md.
+# У кожному рядку щонайменше два власники: GitHub не зараховує апрув автора PR,
+# тож з одним власником його власні PR у своєму модулі не можна змерджити без адміна.
+# Апруву будь-якого одного власника з рядка достатньо.
 
-*                                @greenyarik0505-jpg
+*                                @SASCYT9 @greenyarik0505-jpg
 
 # A - платформа
-/src/WindowsTools.App/         @greenyarik0505-jpg
-/src/WindowsTools.Core/        @greenyarik0505-jpg
-/src/WindowsTools.Interop/     @greenyarik0505-jpg
-/src/Modules/WindowsTools.Modules.Island/     @greenyarik0505-jpg
-/.github/                      @greenyarik0505-jpg
-/Directory.Build.props         @greenyarik0505-jpg
+/src/WindowsTools.App/         @greenyarik0505-jpg @SASCYT9
+/src/WindowsTools.Core/        @greenyarik0505-jpg @SASCYT9
+/src/WindowsTools.Interop/     @greenyarik0505-jpg @SASCYT9
+/src/Modules/WindowsTools.Modules.Island/     @greenyarik0505-jpg @SASCYT9
+/.github/                      @greenyarik0505-jpg @SASCYT9
+/Directory.Build.props         @greenyarik0505-jpg @SASCYT9
 
-# B - система
-/src/Modules/WindowsTools.Modules.Audio/      @SASCYT9
-/src/Modules/WindowsTools.Modules.Monitor/    @SASCYT9
-/src/Modules/WindowsTools.Modules.Display/    @SASCYT9
-/src/Modules/WindowsTools.Modules.Agents/     @SASCYT9
+# B - система та агенти
+/src/Modules/WindowsTools.Modules.Audio/      @SASCYT9 @greenyarik0505-jpg
+/src/Modules/WindowsTools.Modules.Monitor/    @SASCYT9 @greenyarik0505-jpg
+/src/Modules/WindowsTools.Modules.Display/    @SASCYT9 @greenyarik0505-jpg
+/src/Modules/WindowsTools.Modules.Agents/     @SASCYT9 @greenyarik0505-jpg
 
-# C - вікна
-/src/Modules/WindowsTools.Modules.Switcher/   @kirilpuskaruk-svg
-/src/Modules/WindowsTools.Modules.Snap/       @kirilpuskaruk-svg
-/src/Modules/WindowsTools.Modules.Clipboard/  @kirilpuskaruk-svg
-/src/Modules/WindowsTools.Modules.Input/      @kirilpuskaruk-svg
+# C - вікна та ввід
+/src/Modules/WindowsTools.Modules.Switcher/   @kirilpuskaruk-svg @SASCYT9
+/src/Modules/WindowsTools.Modules.Snap/       @kirilpuskaruk-svg @SASCYT9
+/src/Modules/WindowsTools.Modules.Clipboard/  @kirilpuskaruk-svg @SASCYT9
+/src/Modules/WindowsTools.Modules.Input/      @kirilpuskaruk-svg @SASCYT9
 
 # D - захоплення й обслуговування
-/src/Modules/WindowsTools.Modules.Capture/    @DiminiReal
-/src/Modules/WindowsTools.Modules.Cleaner/    @DiminiReal
-/src/Modules/WindowsTools.Modules.Tools/      @DiminiReal
+/src/Modules/WindowsTools.Modules.Capture/    @DiminiReal @SASCYT9
+/src/Modules/WindowsTools.Modules.Cleaner/    @DiminiReal @SASCYT9
+/src/Modules/WindowsTools.Modules.Tools/      @DiminiReal @SASCYT9
