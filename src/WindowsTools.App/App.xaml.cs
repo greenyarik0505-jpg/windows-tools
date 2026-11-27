@@ -7,6 +7,7 @@ using WindowsTools.Core.Activities;
 using WindowsTools.Core.Modules;
 using WindowsTools.Core.Tray;
 using WindowsTools.Interop;
+using WindowsTools.Modules.Agents;
 using WindowsTools.Modules.Island;
 using WinRT.Interop;
 
@@ -38,6 +39,10 @@ public partial class App : Application, IDisposable
             new IslandModule(
                 sp.GetRequiredService<IActivityHub>(),
                 DispatcherQueue.GetForCurrentThread()));
+        collection.AddSingleton<IModule>(sp =>
+            new AgentsModule(
+                sp.GetRequiredService<IActivityHub>(),
+                sp.GetRequiredService<ILoggerFactory>()));
         _services = collection.BuildServiceProvider();
     }
 
