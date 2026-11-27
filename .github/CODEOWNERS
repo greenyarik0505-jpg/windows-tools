@@ -1,5 +1,4 @@
 # Останнє правило, що збігається, перемагає. Ролі A-D - у docs/ROADMAP.md.
-# Роль D ще не призначена: впишіть логін замість @dev-d і розкоментуйте рядки.
 
 *                                @greenyarik0505-jpg
 
@@ -24,6 +23,6 @@
 /src/Modules/WindowsTools.Modules.Input/      @kirilpuskaruk-svg
 
 # D - захоплення й обслуговування
-# /src/Modules/WindowsTools.Modules.Capture/    @dev-d
-# /src/Modules/WindowsTools.Modules.Cleaner/    @dev-d
-# /src/Modules/WindowsTools.Modules.Tools/      @dev-d
+/src/Modules/WindowsTools.Modules.Capture/    @DiminiReal
+/src/Modules/WindowsTools.Modules.Cleaner/    @DiminiReal
+/src/Modules/WindowsTools.Modules.Tools/      @DiminiReal

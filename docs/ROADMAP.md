@@ -10,7 +10,7 @@
 | **A — Платформа** (тімлід) | @greenyarik0505-jpg | `App`, `Core`, `Interop`, CI, релізи, оновлювач | Island, показ AI-агентів |
 | **B — Система та агенти** | @SASCYT9 | `Modules.Agents`, `Modules.Audio`, `Modules.Monitor`, `Modules.Display` | дані AI-агентів, мікшер гучності, системний монітор, вентилятори, дисплеї |
 | **C — Вікна та ввід** | @kirilpuskaruk-svg | `Modules.Switcher`, `Modules.Snap`, `Modules.Clipboard`, `Modules.Input` | перемикач вікон, розкладка, буфер обміну, миша й клавіатура, сніпети |
-| **D — Захоплення й обслуговування** | _не призначено_ | `Modules.Capture`, `Modules.Cleaner`, `Modules.Tools` | скріншоти, запис, OCR, піпетка, чистилка, деінсталятор, оновлення через winget |
+| **D — Захоплення й обслуговування** | @DiminiReal | `Modules.Capture`, `Modules.Cleaner`, `Modules.Tools` | скріншоти, запис, OCR, піпетка, чистилка, деінсталятор, оновлення через winget |
 
 Власник модуля ревʼюїть усі PR у ньому. Зміни в `Core`/`Interop` ревʼюїть A.
 Реліз-менеджер — по черзі, один спринт кожен.
