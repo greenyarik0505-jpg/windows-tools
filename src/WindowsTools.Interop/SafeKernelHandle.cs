@@ -39,5 +39,5 @@ public sealed class SafeKernelHandle : SafeHandleZeroOrMinusOneIsInvalid
     /// <inheritdoc />
     protected override bool ReleaseHandle() => _release(handle);
 
-    private static bool CloseNativeHandle(IntPtr handle) => PInvoke.CloseHandle(new HANDLE(handle)).Value;
+    private static bool CloseNativeHandle(IntPtr handle) => PInvoke.CloseHandle(new HANDLE(handle)) != 0;
 }

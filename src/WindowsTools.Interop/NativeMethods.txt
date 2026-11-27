@@ -46,9 +46,5 @@ TranslateMessage
 UnhookWinEvent
 UnhookWindowsHookEx
 UnregisterHotKey
-WH_KEYBOARD_LL
-WH_MOUSE_LL
-MOD_ALT
-MOD_CONTROL
-MOD_SHIFT
-MOD_WIN
+WINDOWS_HOOK_ID
+HOT_KEY_MODIFIERS
