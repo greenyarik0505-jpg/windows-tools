@@ -1,3 +1,5 @@
+using Xunit;
+
 namespace WindowsTools.Interop.Tests;
 
 /// <summary>
