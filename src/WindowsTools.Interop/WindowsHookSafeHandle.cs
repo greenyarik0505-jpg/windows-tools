@@ -19,11 +19,11 @@ public sealed class WindowsHookSafeHandle : SafeHandleZeroOrMinusOneIsInvalid
     /// <summary>
     /// Takes ownership of an existing hook.
     /// </summary>
-    /// <param name="hook">Hook returned by the generated CsWin32 API.</param>
-    public WindowsHookSafeHandle(HHOOK hook)
+    /// <param name="handle">Native hook handle returned by a Win32 hook API.</param>
+    public WindowsHookSafeHandle(nint handle)
         : base(ownsHandle: true)
     {
-        SetHandle((nint)hook);
+        SetHandle(handle);
     }
 
     /// <inheritdoc />
