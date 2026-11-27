@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Island_Title" xml:space="preserve">
+    <value>AI agents</value>
+  </data>
+  <data name="Header_Summary" xml:space="preserve">
+    <value>{0} working · {1} waiting · {2} total</value>
+  </data>
+  <data name="State_Working" xml:space="preserve">
+    <value>Working</value>
+  </data>
+  <data name="State_Waiting" xml:space="preserve">
+    <value>Needs you</value>
+  </data>
+  <data name="State_Idle" xml:space="preserve">
+    <value>Idle</value>
+  </data>
+  <data name="State_Completed" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="State_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Collapsed_None" xml:space="preserve">
+    <value>No active agents</value>
+  </data>
+  <data name="Collapsed_WaitingOne" xml:space="preserve">
+    <value>{0} needs you</value>
+  </data>
+  <data name="Collapsed_WaitingMany" xml:space="preserve">
+    <value>{0} need you</value>
+  </data>
+  <data name="Collapsed_WorkingMany" xml:space="preserve">
+    <value>{0} agents working</value>
+  </data>
+  <data name="Collapsed_IdleMany" xml:space="preserve">
+    <value>{0} agents idle</value>
+  </data>
+  <data name="Expanded_Empty" xml:space="preserve">
+    <value>Start Claude Code and its sessions will appear here.</value>
+  </data>
+  <data name="Expanded_More" xml:space="preserve">
+    <value>+{0} more</value>
+  </data>
+  <data name="Metric_Tokens" xml:space="preserve">
+    <value>{0} tokens</value>
+  </data>
+  <data name="Duration_Seconds" xml:space="preserve">
+    <value>{0}s</value>
+  </data>
+  <data name="Duration_Minutes" xml:space="preserve">
+    <value>{0}m</value>
+  </data>
+  <data name="Duration_HoursMinutes" xml:space="preserve">
+    <value>{0}h {1}m</value>
+  </data>
+</root>

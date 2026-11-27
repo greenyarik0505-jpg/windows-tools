@@ -1,10 +1,14 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml;
 using WindowsTools.Core;
+using WindowsTools.Core.Activities;
 using WindowsTools.Core.Modules;
 using WindowsTools.Core.Tray;
 using WindowsTools.Interop;
+using WindowsTools.Modules.Agents;
+using WindowsTools.Modules.Island;
 using WinRT.Interop;
 
 namespace WindowsTools.App;
@@ -29,8 +33,11 @@ public partial class App : Application, IDisposable
     {
         InitializeComponent();
 
+        // Modules are created before the container exists, so shared services they need are created here first.
+        var activityHub = new ActivityHub();
         var collection = new ServiceCollection();
-        collection.AddWindowsToolsCore(CreateModules());
+        collection.AddSingleton<IActivityHub>(activityHub);
+        collection.AddWindowsToolsCore(CreateModules(activityHub));
         _services = collection.BuildServiceProvider();
     }
 
@@ -69,7 +76,11 @@ public partial class App : Application, IDisposable
         _trayIconHost.ExitClicked += OnTrayExitClicked;
     }
 
-    private static IReadOnlyList<IModule> CreateModules() => [];
+    private IReadOnlyList<IModule> CreateModules(IActivityHub activityHub) =>
+    [
+        new IslandModule(activityHub, DispatcherQueue.GetForCurrentThread()),
+        new AgentsModule(activityHub, () => _services.GetRequiredService<ILoggerFactory>()),
+    ];
 
     private void OnTrayPrimaryClicked(object? sender, (int X, int Y) anchor)
     {

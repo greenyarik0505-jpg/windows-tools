@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Island_Title" xml:space="preserve">
+    <value>AI-агенти</value>
+  </data>
+  <data name="Header_Summary" xml:space="preserve">
+    <value>працюють: {0} · чекають: {1} · усього: {2}</value>
+  </data>
+  <data name="State_Working" xml:space="preserve">
+    <value>Працює</value>
+  </data>
+  <data name="State_Waiting" xml:space="preserve">
+    <value>Чекає на тебе</value>
+  </data>
+  <data name="State_Idle" xml:space="preserve">
+    <value>Простоює</value>
+  </data>
+  <data name="State_Completed" xml:space="preserve">
+    <value>Завершив</value>
+  </data>
+  <data name="State_Error" xml:space="preserve">
+    <value>Помилка</value>
+  </data>
+  <data name="Collapsed_None" xml:space="preserve">
+    <value>Немає активних агентів</value>
+  </data>
+  <data name="Collapsed_WaitingOne" xml:space="preserve">
+    <value>{0} чекає на тебе</value>
+  </data>
+  <data name="Collapsed_WaitingMany" xml:space="preserve">
+    <value>Чекають на тебе: {0}</value>
+  </data>
+  <data name="Collapsed_WorkingMany" xml:space="preserve">
+    <value>Працюють агентів: {0}</value>
+  </data>
+  <data name="Collapsed_IdleMany" xml:space="preserve">
+    <value>Простоюють агентів: {0}</value>
+  </data>
+  <data name="Expanded_Empty" xml:space="preserve">
+    <value>Запусти Claude Code — його сесії з'являться тут.</value>
+  </data>
+  <data name="Expanded_More" xml:space="preserve">
+    <value>Ще {0}</value>
+  </data>
+  <data name="Metric_Tokens" xml:space="preserve">
+    <value>{0} токенів</value>
+  </data>
+  <data name="Duration_Seconds" xml:space="preserve">
+    <value>{0} с</value>
+  </data>
+  <data name="Duration_Minutes" xml:space="preserve">
+    <value>{0} хв</value>
+  </data>
+  <data name="Duration_HoursMinutes" xml:space="preserve">
+    <value>{0} год {1} хв</value>
+  </data>
+</root>
