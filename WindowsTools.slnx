@@ -17,7 +17,19 @@
       <Platform Solution="*|x64" Project="x64" />
     </Project>
   </Folder>
+  <Folder Name="/src/Modules/">
+    <Project Path="src/Modules/WindowsTools.Modules.Island/WindowsTools.Modules.Island.csproj">
+      <Platform Solution="*|Any CPU" Project="x64" />
+      <Platform Solution="*|ARM64" Project="ARM64" />
+      <Platform Solution="*|x64" Project="x64" />
+    </Project>
+  </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/WindowsTools.Core.Tests/WindowsTools.Core.Tests.csproj" />
+    <Project Path="tests/WindowsTools.Modules.Island.Tests/WindowsTools.Modules.Island.Tests.csproj">
+      <Platform Solution="*|Any CPU" Project="x64" />
+      <Platform Solution="*|ARM64" Project="ARM64" />
+      <Platform Solution="*|x64" Project="x64" />
+    </Project>
   </Folder>
 </Solution>
