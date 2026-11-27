@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
+using WindowsTools.Core.Activities;
 using WindowsTools.Core.Logging;
 using WindowsTools.Core.Modules;
 using WindowsTools.Core.Settings;
@@ -47,6 +48,7 @@ public static class ServiceCollectionExtensions
         services.TryAddSingleton<ISettingsStore>(sp =>
             new FileSettingsStore(settingsDir, sp.GetRequiredService<ILogger<FileSettingsStore>>()));
         services.TryAddSingleton<ITrayHost, TrayHost>();
+        services.TryAddSingleton<IActivityHub, ActivityHub>();
 
         var moduleList = modules.ToList();
         foreach (var module in moduleList)
