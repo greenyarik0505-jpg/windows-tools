@@ -21,6 +21,13 @@ NIN_SELECT
 PostMessageW
 RegisterClassExW
 RegisterWindowMessageW
+RegisterHotKey
+UnregisterHotKey
+SetWindowsHookExW
+UnhookWindowsHookEx
+CallNextHookEx
+SetWinEventHook
+UnhookWinEvent
 ReleaseDC
 SetForegroundWindow
 Shell_NotifyIconGetRect
