@@ -20,7 +20,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
     <PackageReference Include="Microsoft.Extensions.Logging" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" />
-    <PackageReference Include="Microsoft.WindowsAppSDK" />
+    <!-- Only the WinUI component (it brings Foundation and InteractiveExperiences). The Microsoft.WindowsAppSDK
+         metapackage also ships AI/ML (onnxruntime, DirectML), Widgets and Search, which we do not use. -->
+    <PackageReference Include="Microsoft.WindowsAppSDK.WinUI" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WindowsTools.Core\WindowsTools.Core.csproj" />
