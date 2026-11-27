@@ -19,5 +19,6 @@
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/WindowsTools.Core.Tests/WindowsTools.Core.Tests.csproj" />
+    <Project Path="tests/WindowsTools.Interop.Tests/WindowsTools.Interop.Tests.csproj" />
   </Folder>
 </Solution>
