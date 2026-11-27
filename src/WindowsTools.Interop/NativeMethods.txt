@@ -14,6 +14,7 @@ GetCurrentProcessId
 GetCursorPos
 GetDC
 GetDpiForWindow
+GetMessageW
 GetMonitorInfoW
 GetSystemMetricsForDpi
 MonitorFromPoint
@@ -35,3 +36,15 @@ WM_LBUTTONUP
 WM_NULL
 WM_RBUTTONUP
 WM_SETTINGCHANGE
+CallNextHookEx
+CloseHandle
+DispatchMessageW
+RegisterHotKey
+SetWinEventHook
+SetWindowsHookExW
+TranslateMessage
+UnhookWinEvent
+UnhookWindowsHookEx
+UnregisterHotKey
+WINDOWS_HOOK_ID
+HOT_KEY_MODIFIERS

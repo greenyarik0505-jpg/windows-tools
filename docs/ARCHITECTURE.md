@@ -72,6 +72,15 @@ public interface IModule
 | Cleaner | Known Folders, реєстр Uninstall, `winget` CLI для оновлень |
 | Tools | `SetThreadExecutionState` (keep-awake), піпетка через `GetPixel`/capture |
 
+## Додавання Win32 API
+
+1. Додай точну назву Win32 API або типу до `src/WindowsTools.Interop/NativeMethods.txt`.
+2. Збери `WindowsTools.Interop`: CsWin32 згенерує типи та `PInvoke`-обгортки. Використовуй їх у `Interop`; модулі мають викликати лише обгортку з `Interop`.
+3. Для власних ресурсів повертай `SafeHandle`. Використовуй згенеровані CsWin32 safe-handle API, якщо вони відповідають парній функції звільнення. Для інших kernel object handles використовуй `SafeKernelHandle` тільки тоді, коли документація API вказує `CloseHandle`.
+4. Додай тест обгортки в `tests/WindowsTools.Interop.Tests`; Win32-залежність ізолюй, якщо тест перевіряє лише життєвий цикл керованого handle.
+
+Не оголошуй ручні `[DllImport]` або `LibraryImport` у solution. Небезпечний код і прямі виклики згенерованих API залишаються в `WindowsTools.Interop`.
+
 ## Рішення, які вже прийнято
 
 - **Unpackaged**, а не MSIX: потрібні глобальні хуки, запуск helper-процесу з admin, вільне розташування файлів.
