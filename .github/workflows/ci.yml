@@ -44,6 +44,10 @@ jobs:
         if: steps.sln.outputs.exists == 'true'
         run: dotnet build -c Release --no-restore -p:Platform=x64
 
+      - name: Build ARM64
+        if: steps.sln.outputs.exists == 'true'
+        run: dotnet build -c Release --no-restore -p:Platform=ARM64
+
       - name: Test
         if: steps.sln.outputs.exists == 'true'
         run: dotnet test -c Release --no-build -p:Platform=x64 --logger "trx;LogFileName=results.trx"
