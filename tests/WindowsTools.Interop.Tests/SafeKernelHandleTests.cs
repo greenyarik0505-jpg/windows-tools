@@ -1,4 +1,3 @@
-using WindowsTools.Interop;
 using Xunit;
 
 namespace WindowsTools.Interop.Tests;
